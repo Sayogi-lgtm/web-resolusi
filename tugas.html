@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hitung Lingkaran</title>
+  <style>
+    .box {
+      border: 1px solid #333;
+      padding: 15px;
+      width: 300px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="inputAngka()">Masukkan Angka</button>
+
+<div class="box">
+  <p id="luas">Luas Lingkaran = ?</p>
+  <p id="keliling">Keliling Lingkaran = ?</p>
+</div>
+
+<script>
+function inputAngka() {
+  let r = prompt("Masukkan jari-jari lingkaran:");
+  r = parseFloat(r);
+
+  let luas = 3.14 * r * r;
+  let keliling = 2 * 3.14 * r;
+
+  document.getElementById("luas").innerHTML =
+    "Luas Lingkaran = " + luas.toFixed(2);
+
+  document.getElementById("keliling").innerHTML =
+    "Keliling Lingkaran = " + keliling.toFixed(2);
+}
+</script>
+
+</body>
+</html>
